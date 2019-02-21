@@ -1,19 +1,247 @@
 body {
     margin: 0;
     padding 0;
+    background-color: white
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Abhaya Libre', serif;
+}
+
+.h2UF {
+    margin: 40px 0 0 30px;
+}
+
+nav {
+    border-bottom: 1px solid black;
+    text-align: right;
+    height: auto;
+    min-height: 70px;
+    line-height: 70px;
+}
+
+.logo img {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    margin: 10px 0 0 20px;
+
+
+}
+
+.menu {
+    color: white;
+    background-color: black;
+}
+
+.menu a {
+
+    top: 6px;
+    position: relative;
+    text-decoration: none;
+    margin: 30px;
+    /*    line-height: 70px;*/
+    clear: right;
+    color: white;
+    font-family: 'Abhaya Libre', serif;
+    font-size: 18px;
+
+}
+
+.menu a:hover {
+    color: rgb(56, 126, 118);
+
+}
+
+#splash {
+
+    background-image: url(coriander.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.splash-textbox {
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.54);
+    top: 300px;
+
+
+}
+
+.splash-textbox p {
+    padding: 10px;
+    text-align: center;
+}
+
+.splash-textbox h1 {
+    padding: 10px;
+    text-align: center;
 }
 
 
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 100vw;
-    grid-gap: 5px;
+
+
+
+#konceptet {
+    display: flex;
+    flex-direction: column;
+    /*    background-color: lightgoldenrodyellow;*/
+    margin-top: 30px;
 
 }
 
-.item {
-    background-color: papayawhip;
+#konceptet .box1 {
+    margin: auto 30px;
+
 }
 
+#konceptet .box-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto 30px;
+    align-items: center;
+
+
+}
+
+.responsive {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    filter: saturate(60%);
+    margin-top: 20px;
+}
+
+.responsive2 {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+
+
+
+
+
+
+#udvalgte_favoritter {
+    margin: auto 30px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+    #konceptet .box-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #udvalgte_favoritter {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #udvalgte_favoritter .box4 {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    #udvalgte_favoritter .box5 {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    #udvalgte_favoritter .box6 {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    #udvalgte_favoritter .box7 {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    #udvalgte_favoritter .boxtext {
+        margin-top: -15px;
+        margin-right: 15px;
+        width: 200px;
+    }
+
+
+    @media only screen and (min-width: 1000px) {
+
+        #udvalgte_favoritter {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        #udvalgte_favoritter .box4 {
+
+            margin-top: 20px;
+            max-width: 550px;
+        }
+
+        #udvalgte_favoritter .box5 {
+
+            margin-top: 20px;
+            max-width: 550px;
+        }
+
+        #udvalgte_favoritter .box6 {
+
+            margin-top: 20px;
+            max-width: 550px;
+        }
+
+        #udvalgte_favoritter .box7 {
+
+            margin-top: 20px;
+            max-width: 550px;
+        }
+
+        #udvalgte_favoritter .boxtext {
+            width: 200px;
+
+
+        }
+    }
