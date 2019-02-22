@@ -28,6 +28,8 @@ nav {
     height: auto;
     min-height: 70px;
     line-height: 70px;
+
+
 }
 
 .logo img {
@@ -59,7 +61,7 @@ nav {
 }
 
 .menu a:hover {
-    color: rgb(56, 126, 118);
+    color: #FAEBC4;
 
 }
 
@@ -146,18 +148,10 @@ nav {
 
 #udvalgte_favoritter {
     margin: auto 30px;
-    margin-top: 60px;
+    margin-top: 40px;
     margin-bottom: 70px;
 
 }
-
-
-
-
-
-
-
-
 
 
 

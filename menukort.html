@@ -10,21 +10,22 @@
     <style>
         body {
             margin: auto 0vw;
-            background-color: honeydew;
+            background-color: white;
         }
 
         p {
-    font-family: 'Open Sans', sans-serif;
-}
+            font-family: 'Open Sans', sans-serif;
+        }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Abhaya Libre', serif;
-}
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a {
+            font-family: 'Abhaya Libre', serif;
+        }
 
 
         img {
@@ -37,6 +38,7 @@ h6 {
             height: auto;
             min-height: 70px;
             line-height: 70px;
+
         }
 
         .logo img {
@@ -68,7 +70,7 @@ h6 {
         }
 
         .menu a:hover {
-            color: rgb(56, 126, 118);
+            color: #FAEBC4;
 
         }
 
@@ -77,7 +79,9 @@ h6 {
         #liste {
             display: grid;
             grid-template-columns: 1fr;
-            margin: auto;
+            margin: auto 25px;
+            justify-items: center;
+
 
 
         }
@@ -85,26 +89,43 @@ h6 {
         @media only screen and (min-width: 768px) {
             #liste {
                 grid-template-columns: 1fr 1fr;
-                margin: auto 10px;
+                margin: auto 35px;
+            }
+
+            .ret {
+                max-width: 400px;
+            }
+
+            nav {
+                margin-left: 100px;
             }
         }
 
         @media only screen and (min-width: 1024px) {
             #liste {
                 grid-template-columns: 1fr 1fr 1fr;
-                margin: auto 10px;
+                margin: auto 50px;
+            }
+
+            .ret {
+                max-width: 400px;
+            }
+
+            nav {
+                margin: 30px;
             }
         }
 
         nav {
             text-align: left;
             margin: 30px;
+            margin-left: 53px;
         }
 
         .valgt {
-            background-color: beige;
+            background-color: #FAEBC4;
             color: black;
-            border: 1px solid black;
+
         }
 
         h1 {
@@ -114,9 +135,9 @@ h6 {
 
 
         .ret {
-            background-color: beige;
+            background-color: #FAEBC4;
             margin: 30px;
-            cursor: pointer;
+            max-width: 500px;
         }
 
         .ret p,
@@ -137,6 +158,7 @@ h6 {
             font-size: 16px;
             margin: 4px 2px;
             cursor: pointer;
+            font-family: 'Abhaya Libre', 'serif';
         }
 
         #popup {
@@ -193,6 +215,7 @@ h6 {
     </div>
 
 
+    <!--
     <div id="popup">
 
         <div id="luk">
@@ -202,15 +225,16 @@ h6 {
         <div id="indhold"></div>
 
     </div>
+-->
 
     <h1>Alle retter</h1>
 
     <nav>
         <button class="filter valgt" data-hold="alle">Alle retter</button>
-        <button class="filter" data-hold="forretter">Forretter</button>
-        <button class="filter" data-hold="hovedretter">Hovedretter</button>
+        <button class="filter" data-hold="starter">Forretter</button>
+        <button class="filter" data-hold="hovedret">Hovedretter</button>
         <button class="filter" data-hold="drikkevarer">Drikkevarer</button>
-        <button class="filter" data-hold="sideorders">Side Orders</button>
+        <button class="filter" data-hold="side_order">Side orders</button>
     </nav>
 
 
@@ -227,11 +251,11 @@ h6 {
         function start() {
             let dest = document.querySelector("#liste");
             async function getJson() {
-                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1jxxxFoWBuMJ1qhQ9BQIAyKHmP38XtAF9_sQr0xo5JLo");
+                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=14zheBuN_DRSI-7A446vRNi0p4gVxCWr4zZR4HIVg5OA");
                 alleRetter = await jsonData.json();
 
                 alleRetter.sort((a, b) => {
-                    return (a.pris - b.pris);
+                    return (b.pris - a.pris);
                 });
 
                 visRetter();
