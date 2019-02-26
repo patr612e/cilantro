@@ -7,6 +7,7 @@
     <title>Menukort</title>
     <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/uwy5veb.css">
     <style>
         body {
             margin: auto 0vw;
@@ -87,6 +88,13 @@
 
         }
 
+        .ret_popup {
+            max-width: 500px;
+            background-color: #FAEBC4;
+            padding: 10px;
+            align-items: center;
+        }
+
         @media only screen and (min-width: 768px) {
             #liste {
                 grid-template-columns: 1fr 1fr;
@@ -98,7 +106,7 @@
             }
 
             nav {
-                margin-left: 100px;
+                margin-left: 200px;
             }
         }
 
@@ -139,6 +147,7 @@
             background-color: #FAEBC4;
             margin: 30px;
             max-width: 500px;
+            cursor: pointer;
         }
 
         .ret p,
@@ -174,11 +183,14 @@
 
         #indhold {
 
+            /*
             height: 50vh;
             width: 70vw;
+*/
 
-            margin: 4rem auto;
-            text-align: center;
+            margin: 100px auto;
+            align-content: center;
+
         }
 
         #indhold p,
@@ -199,6 +211,11 @@
             cursor: pointer;
         }
 
+        .ret_popup_container {
+            display: flex;
+            justify-content: center;
+        }
+
     </style>
 </head>
 
@@ -217,17 +234,19 @@
     </div>
 
 
-    <!--
+
     <div id="popup">
 
+        <!--
         <div id="luk">
             <button>X</button>
         </div>
+-->
 
         <div id="indhold"></div>
 
     </div>
--->
+
 
     <h1>Alle retter</h1>
 
@@ -287,15 +306,17 @@
                         function visSingle() {
                             document.querySelector("#indhold").innerHTML =
 
-                                `<article class="ret">
-                                    <img src="imgs/large/${ret.billede}.jpg" alt="${ret.navn}">
-                                    <h2>${ret.navn}</h2>
-                                    <p>${ret.lang}</p>
-                                    <p>${ret.pris} kr. </p>
-                                </article>`;
+                                `<div class="ret_popup_container">
+                                    <article class="ret_popup">
+                                        <img src="finals/${ret.billede}.jpg" alt="${ret.navn}">
+                                        <h2>${ret.navn}</h2>
+                                        <p>${ret.kort}</p>
+                                        <p>${ret.pris} kr. </p>
+                                    </article>
+                                </div>`;
 
                             document.querySelector("#popup").style.display = "block";
-                            document.querySelector("#popup #luk").addEventListener("click", close);
+                            document.querySelector("#popup").addEventListener("click", close);
                         }
 
                         function close() {

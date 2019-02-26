@@ -18,7 +18,7 @@ h6 {
     font-family: 'Abhaya Libre', serif;
 }
 
-.h2UF {
+.h2_udvalgte_favoritter {
     margin: 40px 0 0 30px;
 }
 
@@ -45,40 +45,46 @@ h6 {
 
 }
 
-nav {
-    border-bottom: 1px solid black;
-    text-align: right;
-    height: auto;
-    min-height: 70px;
-    line-height: 70px;
-
-}
+nav {}
 
 .logo img {
     position: absolute;
     width: 150px;
     height: 50px;
     margin: 10px 0 0 20px;
+}
+
+header {
+
+    width: 100%;
+    position: fixed;
+    height: auto;
+    min-height: 70px;
+    line-height: 70px;
+    background-color: black;
 
 
 }
 
 .menu {
     color: white;
-    background-color: black;
+    float: right;
+
+
+
 }
 
 .menu a {
 
-    top: 6px;
-    position: relative;
     text-decoration: none;
     margin: 30px;
-    /*    line-height: 70px;*/
-    clear: right;
+    line-height: 70px;
     color: white;
     font-family: 'Abhaya Libre', serif;
     font-size: 18px;
+
+
+
 
 }
 
@@ -89,7 +95,7 @@ nav {
 
 #splash {
 
-    background-image: url(coriander.jpg);
+    background-image: url(restaurant.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -103,14 +109,18 @@ nav {
 }
 
 .splash-textbox {
+
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+
     width: 300px;
     border-radius: 20px;
-    background-color: rgba(250, 235, 196, 0.84);
+    background-color: rgba(250, 235, 196, 0.94);
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: -50px;
 
 
 }
@@ -127,13 +137,12 @@ nav {
 
 
 
-
+wrapper {}
 
 
 #konceptet {
     display: flex;
     flex-direction: column;
-    /*    background-color: lightgoldenrodyellow;*/
     margin-top: 30px;
 
 }
@@ -238,49 +247,69 @@ nav {
         width: 200px;
     }
 
+    .h2_udvalgte_favoritter {
+        margin: 40px 0 0 30px;
+    }
 
-    @media only screen and (min-width: 1000px) {
+}
 
-        /*
+
+@media only screen and (min-width: 1000px) {
+
+    /*
         .boks {
             margin: 20px;
         }
 */
 
-        #udvalgte_favoritter {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-
-        }
-
-        #udvalgte_favoritter .box4 {
-
-            margin-top: 20px;
-            max-width: 550px;
-        }
-
-        #udvalgte_favoritter .box5 {
-
-            margin-top: 20px;
-            max-width: 550px;
-        }
-
-        #udvalgte_favoritter .box6 {
-
-            margin-top: 20px;
-            max-width: 550px;
-        }
-
-        #udvalgte_favoritter .box7 {
-
-            margin-top: 20px;
-            max-width: 550px;
-        }
-
-        #udvalgte_favoritter .boxtext {
-            width: 200px;
-
-
-        }
+    .box1 {
+        margin-bottom: 90px;
     }
+
+    #udvalgte_favoritter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    #udvalgte_favoritter .box4 {
+
+        margin-top: 20px;
+        max-width: 550px;
+
+    }
+
+    #udvalgte_favoritter .box5 {
+
+        margin-top: 20px;
+        max-width: 550px;
+    }
+
+    #udvalgte_favoritter .box6 {
+
+        margin-top: 20px;
+        max-width: 550px;
+    }
+
+    #udvalgte_favoritter .box7 {
+
+        margin-top: 20px;
+        max-width: 550px;
+    }
+
+    #udvalgte_favoritter .boxtext {
+        width: 200px;
+
+
+    }
+}
+
+footer {
+    height: 70px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+}
